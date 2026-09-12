@@ -1,6 +1,10 @@
 ---
 title: "David Zhang"
 ---
-![](images/Pete.jpg){width=250px}
+::: {style="clear: both;"}
+![](images/Pete.jpg){width=250px}    
+:::
+
+
 My name is David and this is my 7 year old son Pete. I am a 22 year old international MDS student from Minnesota in the United States. I graduated this May with a double major in computer science and financial economics. I'm hoping that the skills I'll learn and the connections I will make at UBC will secure me a career in tech and data. 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+

@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nYour Name\n\n\n\n\n\nNo matching items"
+    "text": "Predicting Penguin Species from Body Measurements\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nDavid Zhang\n\n\n\n\n\n\n\n\n\n\n\n\nHow Do Penguin Species Differ?\n\n\n\n\n\n\n\n\nSep 22, 2026\n\n\nDavid Zhang\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nYour Name\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -26,5 +26,54 @@
     "title": "About",
     "section": "",
     "text": "I was born in New Jersey and lived in China with my grandparents for 4 years. Afterwards I moved to a small rural town in southern Minnesota where I lived for 18 more years.\nPrior to coming to Canada for the MDS program I studied Computer science and Financial Economics at my hometown College.\nThe reason why I decided to pursue a Masters in Data Science is because I became very interested in both machine learning and data; more so than computer science. My college didn’t offer a data science program which was one of the many reasons that drove me to UBC.\nOutside of academics I mainly spend my time in the gym, eating, sleeping, and gaming. However I never say no to spontaneous plans with friends. I also enjoy watching football and finding random youtube fixations."
+  },
+  {
+    "objectID": "posts/penguins-classification/index.html",
+    "href": "posts/penguins-classification/index.html",
+    "title": "Predicting Penguin Species from Body Measurements",
+    "section": "",
+    "text": "Brief intro of the question and dataset goes here.\nData: Palmer Penguins, Gorman KB, Williams TD, Fraser WR (2014). Palmer Station Antarctica LTER / palmerpenguins Python package. CC0 license."
+  },
+  {
+    "objectID": "posts/penguins-classification/index.html#introduction",
+    "href": "posts/penguins-classification/index.html#introduction",
+    "title": "Predicting Penguin Species from Body Measurements",
+    "section": "",
+    "text": "Brief intro of the question and dataset goes here.\nData: Palmer Penguins, Gorman KB, Williams TD, Fraser WR (2014). Palmer Station Antarctica LTER / palmerpenguins Python package. CC0 license."
+  },
+  {
+    "objectID": "posts/penguins-classification/index.html#setup",
+    "href": "posts/penguins-classification/index.html#setup",
+    "title": "Predicting Penguin Species from Body Measurements",
+    "section": "Setup",
+    "text": "Setup\n\nimport pandas as pd\nfrom palmerpenguins import load_penguins\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.metrics import confusion_matrix, accuracy_score\nimport matplotlib.pyplot as plt"
+  },
+  {
+    "objectID": "posts/penguins-classification/index.html#wrangling",
+    "href": "posts/penguins-classification/index.html#wrangling",
+    "title": "Predicting Penguin Species from Body Measurements",
+    "section": "Wrangling",
+    "text": "Wrangling\n\n# TODO: cleaning + train/test split chunk"
+  },
+  {
+    "objectID": "posts/penguins-classification/index.html#model",
+    "href": "posts/penguins-classification/index.html#model",
+    "title": "Predicting Penguin Species from Body Measurements",
+    "section": "Model",
+    "text": "Model\n\n# TODO: fit logistic regression chunk"
+  },
+  {
+    "objectID": "posts/penguins-classification/index.html#figure",
+    "href": "posts/penguins-classification/index.html#figure",
+    "title": "Predicting Penguin Species from Body Measurements",
+    "section": "Figure",
+    "text": "Figure\n\n\n\n# TODO: confusion matrix plot chunk\n\n\nFigure 1"
+  },
+  {
+    "objectID": "posts/penguins-classification/index.html#findings",
+    "href": "posts/penguins-classification/index.html#findings",
+    "title": "Predicting Penguin Species from Body Measurements",
+    "section": "Findings",
+    "text": "Findings\nProse describing what you found goes here."
   }
 ]

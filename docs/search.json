@@ -75,5 +75,54 @@
     "title": "Predicting Penguin Species from Body Measurements",
     "section": "Findings",
     "text": "Findings\nProse describing what you found goes here."
+  },
+  {
+    "objectID": "posts/penguins-exploration/index.html",
+    "href": "posts/penguins-exploration/index.html",
+    "title": "How Do Penguin Species Differ?",
+    "section": "",
+    "text": "Brief intro of the question and dataset goes here.\nData: Palmer Penguins, Gorman KB, Williams TD, Fraser WR (2014). Palmer Station Antarctica LTER / palmerpenguins R package. CC0 license."
+  },
+  {
+    "objectID": "posts/penguins-exploration/index.html#introduction",
+    "href": "posts/penguins-exploration/index.html#introduction",
+    "title": "How Do Penguin Species Differ?",
+    "section": "",
+    "text": "Brief intro of the question and dataset goes here.\nData: Palmer Penguins, Gorman KB, Williams TD, Fraser WR (2014). Palmer Station Antarctica LTER / palmerpenguins R package. CC0 license."
+  },
+  {
+    "objectID": "posts/penguins-exploration/index.html#setup",
+    "href": "posts/penguins-exploration/index.html#setup",
+    "title": "How Do Penguin Species Differ?",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "posts/penguins-exploration/index.html#wrangling",
+    "href": "posts/penguins-exploration/index.html#wrangling",
+    "title": "How Do Penguin Species Differ?",
+    "section": "Wrangling",
+    "text": "Wrangling\n\n# TODO: cleaning chunk"
+  },
+  {
+    "objectID": "posts/penguins-exploration/index.html#summary-statistics",
+    "href": "posts/penguins-exploration/index.html#summary-statistics",
+    "title": "How Do Penguin Species Differ?",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\n# TODO: grouped summary chunk"
+  },
+  {
+    "objectID": "posts/penguins-exploration/index.html#figure",
+    "href": "posts/penguins-exploration/index.html#figure",
+    "title": "How Do Penguin Species Differ?",
+    "section": "Figure",
+    "text": "Figure\n\n# TODO: ggplot chunk"
+  },
+  {
+    "objectID": "posts/penguins-exploration/index.html#findings",
+    "href": "posts/penguins-exploration/index.html#findings",
+    "title": "How Do Penguin Species Differ?",
+    "section": "Findings",
+    "text": "Findings\nProse describing what you found goes here."
   }
 ]

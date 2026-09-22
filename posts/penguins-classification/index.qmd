@@ -1,0 +1,49 @@
+---
+title: "Predicting Penguin Species from Body Measurements"
+author: "David Zhang"
+date: "2026-09-22"
+jupyter: python3
+---
+
+## Introduction
+
+Brief intro of the question and dataset goes here.
+
+Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), Gorman KB, Williams TD, Fraser WR (2014). Palmer Station Antarctica LTER / palmerpenguins Python package. CC0 license.
+
+## Setup
+
+```{python}
+#| message: false
+#| warning: false
+import pandas as pd
+from palmerpenguins import load_penguins
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix, accuracy_score
+import matplotlib.pyplot as plt
+```
+
+## Wrangling
+
+```{python}
+# TODO: cleaning + train/test split chunk
+```
+
+## Model
+
+```{python}
+# TODO: fit logistic regression chunk
+```
+
+## Figure
+
+```{python}
+#| label: fig-confusion-matrix
+#| fig-cap: "Confusion matrix for species classification."
+# TODO: confusion matrix plot chunk
+```
+
+## Findings
+
+Prose describing what you found goes here.

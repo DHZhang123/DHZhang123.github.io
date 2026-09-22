@@ -1,0 +1,44 @@
+---
+title: "How Do Penguin Species Differ?"
+author: "David Zhang"
+date: "2026-09-22"
+---
+
+## Introduction
+
+Brief intro of the question and dataset goes here.
+
+Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), Gorman KB, Williams TD, Fraser WR (2014). Palmer Station Antarctica LTER / palmerpenguins R package. CC0 license.
+
+## Setup
+
+```{r}
+#| message: false
+#| warning: false
+library(palmerpenguins)
+library(tidyverse)
+```
+
+## Wrangling
+
+```{r}
+# TODO: cleaning chunk
+```
+
+## Summary Statistics
+
+```{r}
+# TODO: grouped summary chunk
+```
+
+## Figure
+
+```{r}
+#| label: fig-penguin-mass
+#| fig-cap: "Flipper length vs. body mass by species."
+# TODO: ggplot chunk
+```
+
+## Findings
+
+Prose describing what you found goes here.

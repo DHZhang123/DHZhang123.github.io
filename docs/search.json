@@ -53,28 +53,28 @@
     "href": "posts/penguins-classification/index.html#wrangling",
     "title": "Predicting Penguin Species from Body Measurements",
     "section": "Wrangling",
-    "text": "Wrangling\n\n# TODO: cleaning + train/test split chunk"
+    "text": "Wrangling\n\npenguins = load_penguins().dropna()\n\nX = penguins[[\"bill_length_mm\", \"bill_depth_mm\", \"flipper_length_mm\", \"body_mass_g\"]]\ny = penguins[\"species\"]\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.3, random_state=42\n)\n\nX_train.shape, X_test.shape\n\n((233, 4), (100, 4))"
   },
   {
     "objectID": "posts/penguins-classification/index.html#model",
     "href": "posts/penguins-classification/index.html#model",
     "title": "Predicting Penguin Species from Body Measurements",
     "section": "Model",
-    "text": "Model\n\n# TODO: fit logistic regression chunk"
+    "text": "Model\n\nfrom sklearn.preprocessing import StandardScaler\n\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)\n\nmodel = LogisticRegression(max_iter=1000)\nmodel.fit(X_train_scaled, y_train)\n\npreds = model.predict(X_test_scaled)\naccuracy = accuracy_score(y_test, preds)\n\nprint(f\"Test accuracy: {accuracy:.3f}\")\n\nTest accuracy: 0.980"
   },
   {
     "objectID": "posts/penguins-classification/index.html#figure",
     "href": "posts/penguins-classification/index.html#figure",
     "title": "Predicting Penguin Species from Body Measurements",
     "section": "Figure",
-    "text": "Figure\n\n\n\n# TODO: confusion matrix plot chunk\n\n\nFigure 1"
+    "text": "Figure\n\ncm = confusion_matrix(y_test, preds, labels=model.classes_)\n\nfig, ax = plt.subplots()\nim = ax.matshow(cm, cmap=\"Blues\")\n\nax.set_xticks(range(len(model.classes_)))\nax.set_yticks(range(len(model.classes_)))\nax.set_xticklabels(model.classes_)\nax.set_yticklabels(model.classes_)\nax.set_xlabel(\"Predicted species\")\nax.set_ylabel(\"True species\")\nax.xaxis.set_label_position(\"top\")\n\nfor i in range(cm.shape[0]):\n    for j in range(cm.shape[1]):\n        ax.text(j, i, str(cm[i, j]), ha=\"center\", va=\"center\")\n\nplt.colorbar(im)\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Confusion matrix for species classification."
   },
   {
     "objectID": "posts/penguins-classification/index.html#findings",
     "href": "posts/penguins-classification/index.html#findings",
     "title": "Predicting Penguin Species from Body Measurements",
     "section": "Findings",
-    "text": "Findings\nProse describing what you found goes here."
+    "text": "Findings\nThe model classified penguin species with a 98% accuracy on the (small)test set. Of 100 tests 2 were misclassified Chinstrap as Adelie. Gentoo penguins were classified perfectly; maybe due to their body mass and flippers being considerably heavier and longer."
   },
   {
     "objectID": "posts/penguins-exploration/index.html",

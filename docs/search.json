@@ -102,27 +102,27 @@
     "href": "posts/penguins-exploration/index.html#wrangling",
     "title": "How Do Penguin Species Differ?",
     "section": "Wrangling",
-    "text": "Wrangling\n\n# TODO: cleaning chunk"
+    "text": "Wrangling\n\npenguins_clean &lt;- penguins |&gt; \n  drop_na()\n\nglimpse(penguins_clean)\n\nRows: 333\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, 36.7, 39.3, 38.9, 39.2, 41.1, 38.6…\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, 19.3, 20.6, 17.8, 19.6, 17.6, 21.2…\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, 193, 190, 181, 195, 182, 191, 198, 18…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, 3450, 3650, 3625, 4675, 3200, 3800…\n$ sex               &lt;fct&gt; male, female, female, female, male, female, male, fe…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
   },
   {
     "objectID": "posts/penguins-exploration/index.html#summary-statistics",
     "href": "posts/penguins-exploration/index.html#summary-statistics",
     "title": "How Do Penguin Species Differ?",
     "section": "Summary Statistics",
-    "text": "Summary Statistics\n\n# TODO: grouped summary chunk"
+    "text": "Summary Statistics\n\npenguins_clean |&gt; \n  group_by(species, island) |&gt; \n  summarize(\n    mean_mass = mean(body_mass_g),\n    mean_flipper = mean(flipper_length_mm),\n    n = n(),\n    .groups = \"drop\"\n  )\n\n# A tibble: 5 × 5\n  species   island    mean_mass mean_flipper     n\n  &lt;fct&gt;     &lt;fct&gt;         &lt;dbl&gt;        &lt;dbl&gt; &lt;int&gt;\n1 Adelie    Biscoe        3710.         189.    44\n2 Adelie    Dream         3701.         190.    55\n3 Adelie    Torgersen     3709.         192.    47\n4 Chinstrap Dream         3733.         196.    68\n5 Gentoo    Biscoe        5092.         217.   119"
   },
   {
     "objectID": "posts/penguins-exploration/index.html#figure",
     "href": "posts/penguins-exploration/index.html#figure",
     "title": "How Do Penguin Species Differ?",
     "section": "Figure",
-    "text": "Figure\n\n# TODO: ggplot chunk"
+    "text": "Figure\n\nggplot(penguins_clean, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.7, size = 2) +\n  labs(\n    x = \"Flipper length (mm)\",\n    y = \"Body mass (g)\",\n    color = \"Species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\nFigure 1: Flipper length vs. body mass by species."
   },
   {
     "objectID": "posts/penguins-exploration/index.html#findings",
     "href": "posts/penguins-exploration/index.html#findings",
     "title": "How Do Penguin Species Differ?",
     "section": "Findings",
-    "text": "Findings\nProse describing what you found goes here."
+    "text": "Findings\nThrough this analysis we find that body mass and flipper length differ largely by species but do not differ much when it comes to what island they reside on. Adelie penguins have a consistent mean body mass around 3700g regardless of Island. Chinstrap penguins are close to Adelie in size, at roughly 3733g on average.\nGentoo penguins stand apart. With a mean body mass of about 5092g and mean flipper length of 217mm, they are noticeably heavier and longer-flippered than either Adelie or Chinstrap. They are roughly 1.4kg heavier on average than Adelie.\nWe see the same results showcased in our figure with Gentoo penguins clearly being on the upper right section of the grpah corresponding to higher body mass and flipper length."
   }
 ]

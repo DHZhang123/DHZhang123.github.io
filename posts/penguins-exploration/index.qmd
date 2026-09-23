@@ -22,13 +22,23 @@ library(tidyverse)
 ## Wrangling
 
 ```{r}
-# TODO: cleaning chunk
+penguins_clean <- penguins |> 
+  drop_na()
+
+glimpse(penguins_clean)
 ```
 
 ## Summary Statistics
 
 ```{r}
-# TODO: grouped summary chunk
+penguins_clean |> 
+  group_by(species, island) |> 
+  summarize(
+    mean_mass = mean(body_mass_g),
+    mean_flipper = mean(flipper_length_mm),
+    n = n(),
+    .groups = "drop"
+  )
 ```
 
 ## Figure
@@ -36,9 +46,23 @@ library(tidyverse)
 ```{r}
 #| label: fig-penguin-mass
 #| fig-cap: "Flipper length vs. body mass by species."
-# TODO: ggplot chunk
+ggplot(penguins_clean, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point(alpha = 0.7, size = 2) +
+  labs(
+    x = "Flipper length (mm)",
+    y = "Body mass (g)",
+    color = "Species"
+  ) +
+  theme_minimal()
 ```
 
 ## Findings
 
-Prose describing what you found goes here.
+Through this analysis we find that body mass and flipper length differ largely by species but do not differ much when it comes to what island they reside on. Adelie penguins have a consistent mean body mass around 
+3700g regardless of Island. Chinstrap penguins are close to Adelie in size, at roughly 3733g on average.
+
+Gentoo penguins stand apart. With a mean body mass of about 5092g and mean 
+flipper length of 217mm, they are noticeably heavier and longer-flippered 
+than either Adelie or Chinstrap. They are roughly 1.4kg heavier on average than Adelie. 
+
+We see the same results showcased in our figure with Gentoo penguins clearly being on the upper right section of the grpah corresponding to higher body mass and flipper length.
